@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #ff0000;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #ff0000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.row img {
+    width: 200px;
+    height: 180px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+}
+
+.member {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Đảm bảo các nút xếp chồng lên nhau */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+.member button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.member button:hover {
+    background-color: #315f8d;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 20px; /* điều chỉnh khoảng cách từ trên xuống */
+    right: 20px; /* điều chỉnh khoảng cách từ phải sang trái */
+}
+
+
+
