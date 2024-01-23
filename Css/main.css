@@ -6,12 +6,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
 h1 {
     text-align: center;
     color: #ff0000;
+}
+h2 {
+    line-height: 10px;
+    text-align: center;
+    color: #000000;
 }
 .container {
     max-width: 1000px;
@@ -75,9 +80,23 @@ form {
 
 .logout-btn {
     position: absolute;
-    top: 20px; /* điều chỉnh khoảng cách từ trên xuống */
-    right: 20px; /* điều chỉnh khoảng cách từ phải sang trái */
+    top: 810px; /* điều chỉnh khoảng cách từ trên xuống */
+    right: 300px; /* điều chỉnh khoảng cách từ phải sang trái */
 }
 
+/* Add the following styles to your existing CSS file */
+.control_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.university-info {
+    flex-grow: 1;
+}
 
+.mechanical-logo, .bachkhoa-logo {
+    width: 100px; 
+    height: auto;
+    margin-right: 20px; 
+}
