@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(244, 252, 255);
     margin: 0;
     padding: 0;
     display: flex;
@@ -39,11 +39,14 @@ form {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
 }
 
 .row img {
+    flex: 1 1 auto;
+    max-width: 100%;
     width: 200px;
     height: 180px;
     margin: 10px;
@@ -80,10 +83,24 @@ form {
 
 .logout-btn {
     position: absolute;
-    top: 810px; /* điều chỉnh khoảng cách từ trên xuống */
-    right: 300px; /* điều chỉnh khoảng cách từ phải sang trái */
+    top: 20px; /* điều chỉnh khoảng cách từ trên xuống */
+    right: 10px; /* điều chỉnh khoảng cách từ phải sang trái */
 }
 
+.logout-btn button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logout-btn button:hover {
+    background-color: #cc0000;
+}
 /* Add the following styles to your existing CSS file */
 .control_main {
     display: flex;
@@ -99,4 +116,24 @@ form {
     width: 100px; 
     height: auto;
     margin-right: 20px; 
+}
+
+/* CSS cho màn hình lớn (desktop) */
+@media screen and (min-width: 768px) {
+    /* Thêm các quy tắc CSS ở đây */
+    .container {
+        max-width: 1000px;
+    }
+}
+
+/* CSS cho màn hình nhỏ (điện thoại di động) */
+@media screen and (max-width: 767px) {
+    /* Thêm các quy tắc CSS ở đây */
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
 }
