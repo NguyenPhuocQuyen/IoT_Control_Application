@@ -3,7 +3,6 @@ body {
     background-color: rgb(244, 252, 255);
     margin: 0;
     padding: 0;
-    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: auto;
@@ -13,12 +12,26 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-
 .logo {
-    /* background-color: green; */
-    width: 10%;
-    padding-top: 20px;
-    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mechanical-logo img {
+    width: 100px; /* Adjust the width to your preference */
+    height: auto;
+    margin-left: 20px; /* Adjust the margin to your preference */
+}
+
+.bachkhoa-logo,
+.cokhi-logo {
+    left: 20px;
+    width: 100px; /* Adjust the width to your preference */
+    height: auto;
 }
 h1 {
     text-align: center;
@@ -26,7 +39,7 @@ h1 {
 }
 h2 {
     line-height: 10px;
-    text-align: center;
+    text-align: left;
     color: #000000;
 }
 .container {

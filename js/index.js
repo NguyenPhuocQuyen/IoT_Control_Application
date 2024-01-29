@@ -5,7 +5,7 @@ function loginUser() {
 
     if (username === "admin" && password === "123") {
         alert("Okii vào nhó")
-        window.location.href = "./main.html";
+        window.location.href = "./main1.html";
         return true;    
     }
     // else if (username === "" && password === ""){

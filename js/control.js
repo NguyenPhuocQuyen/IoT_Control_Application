@@ -1,3 +1,3 @@
 function gobackMain(){
-    window.location.href=("./main.html");
+    window.location.href=("./main1.html");
 }
