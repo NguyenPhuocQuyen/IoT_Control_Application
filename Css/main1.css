@@ -9,8 +9,8 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 35, 90, 0.83);
-    width: 1485px;
+    background-color: rgba(255, 0, 64, 0.83);
+    width: 1470px;
     height: 90px;
     z-index: 1;
     border-radius: 25px; /* Adjust the value based on your preference */
@@ -61,50 +61,6 @@ body {
     text-align: center;
     color: red;
     position: relative;
-}
-
-.tieude::before,
-.tieude::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 150px; /* Điều chỉnh chiều dài của đường line */
-    height: 2px;
-    background-color: red;
-    transform: translateY(-50%);
-}
-
-.tieude::before {
-    left: 110px; /* Điều chỉnh khoảng cách giữa chữ và đường line bên trái */
-}
-
-.tieude::after {
-    right: 110px; /* Điều chỉnh khoảng cách giữa chữ và đường line bên phải */
-}
-
-
-.btncontrolandsupervise {
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Hiển thị nút theo chiều dọc */
-    align-items: center; /* Căn giữa theo chiều ngang */
-    justify-content: center; /* Căn giữa theo chiều dọc */
-    margin-top: 10px; /* Điều chỉnh khoảng cách giữa nút và tiêu đề */
-}
-
-
-.btncontrolandsupervise button{
-    font-size: 20px;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #4285f4;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btncontrolandsupervise button:hover{
-    background-color: #315f8d;
 }
 
 
@@ -165,25 +121,11 @@ form {
     position: relative;
 }
 
-.thongtin::before,
-.thongtin::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 150px; /* Điều chỉnh chiều dài của đường line */
-    height: 2px;
-    background-color: red;
-    transform: translateY(-50%);
-}
 
-.thongtin::before {
-    left: 110px; /* Điều chỉnh khoảng cách giữa chữ và đường line bên trái */
+.screencontrol{
+    color: blue;
+    margin-left: 100px;
 }
-
-.thongtin::after {
-    right: 110px; /* Điều chỉnh khoảng cách giữa chữ và đường line bên phải */
-}
-
 .logout-btn button {
     padding: 10px 20px;
     background-color: #ff0000;
@@ -197,4 +139,89 @@ form {
 
 .logout-btn button:hover {
     background-color: #cc0000;
+}
+
+.titlecontrol {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px; /* Adjust the margin as needed */
+}
+
+
+.control-frame, .supervise-frame {
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 500px; /* Điều chỉnh chiều rộng nếu cần */
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Thêm hiệu ứng đổ bóng */
+    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+
+.control-frame:hover, .supervise-frame:hover {
+    box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
+}
+
+.screencontrol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.screencontrol h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.light1-title,
+.light2-title,
+.light3-title,
+.light4-title {
+    font-size: 20px;
+    color: #ff0000;
+    margin-left: 120px;
+}
+.control-light {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 1px;
+}
+
+.light-title {
+    margin-right: 10px; /* Khoảng cách giữa chữ "Light 1" và các nút */
+}
+
+.control-buttons{
+    margin-left: 20px;
+}
+
+.control-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Style for TURN ON button */
+.control-buttons button#turn-on {
+    background-color: #4CAF50; /* Màu nền xanh lá cây */
+    color: #fff; /* Màu chữ trắng */
+}
+
+/* Hover effect for TURN ON button */
+.control-buttons button#turn-on:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
+
+/* Style for TURN OFF button */
+.control-buttons button#turn-off {
+    background-color: #FF0000; /* Màu nền đỏ */
+    color: #fff; /* Màu chữ trắng */
+}
+
+.control-buttons button#turn-off:hover {
+    background-color: #990000; /* Màu nền khi hover */
 }

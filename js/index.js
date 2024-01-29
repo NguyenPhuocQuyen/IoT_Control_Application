@@ -4,7 +4,6 @@ function loginUser() {
     var password = document.getElementById('password').value;
 
     if (username === "admin" && password === "123") {
-        alert("Okii vào nhó")
         window.location.href = "./main1.html";
         return true;    
     }
@@ -12,7 +11,7 @@ function loginUser() {
     //     alert("Please enter a username or password");
     // }
     else {
-        alert("Đăng nhập thất bại vui lòng ở lại trang Login");
+        alert("Login failed. Please enter a username or password again");
         return false;
     }
 }
