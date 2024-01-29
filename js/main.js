@@ -16,5 +16,13 @@ function logout_function() {
 
 function showInformation(name) {
     // Chuyển hướng đến trang với tên file HTML mong muốn
-    window.location.href = name.toLowerCase() + '.html';
+    window.location.href = 'http://127.0.0.1:5500/Information/' + name.toLowerCase() + '.html';
+}
+
+
+function showControl(){
+    window.location.href = "./control.html";
+}
+function showSupervise(){
+    window.location.href = "./supervise.html";
 }

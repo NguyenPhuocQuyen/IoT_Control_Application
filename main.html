@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="Css/main.css">
 </head>
 <body>
-    <div>
-        <div class="container">
+    <div class = "main">
+        <div class ="logo">
+            <img src="bachkhoa.jpg" alt="Anhbachkhoa" class="bachkhoa-logo"/>
+        </div>
+        <div class="container" style="background-color:red;width=1000px"> 
             <div class="control_main">
-                <img src="bachkhoa.jpg" alt="Anhbachkhoa" class="bachkhoa-logo"/>
+              
                 <div class="university-info">
                     <h2>The university of DaNang</h2>
                     <h2>University of Science and Technology</h2>
@@ -18,20 +21,23 @@
                 </div>
                 <img src="cokhi.png" alt="Anhcokhi" class="mechanical-logo"/>
             </div>
-
-            <h1> Screen Control and Supervise Devices  </h1>
+            <div class = "title">
+                <h1> Screen Control and Supervise Devices </h1>
+                <button type="button" onclick="showControl()">Control Devices</button>
+                <button type="button" onclick="showSupervise()">Supervise Devices</button>
+            </div>
             <h1>Member Information</h1>
             <div class="row">
                 <div class="member">
-                    <img src="linh.png" alt="Anh1">
+                    <img src="Information/linh.png" alt="Anh1">
                     <button type="button" onclick="showInformation('Linh')">Information</button>
                 </div>
                 <div class="member">
-                    <img src="thuy.png" alt="Anh2">
+                    <img src="Information/thuy.png" alt="Anh2">
                     <button type="button" onclick="showInformation('Thuy')">Information</button>
                 </div>
                 <div class="member">
-                    <img src="thanh.png" alt="Anh3">
+                    <img src="Information/thanh.png" alt="Anh3">
                     <button type="button" onclick="showInformation('Thanh')">Information</button>
                 </div>
             </div>
@@ -41,21 +47,22 @@
         <div class="row">
           
             <div class="member">
-                <img src="phu.png" alt="Anh4">
+                <img src="Information/phu.png" alt="Anh4">
                 <button type="button" onclick="showInformation('Phu')">Information</button>
             </div>
             <div class="member">
-                <img src="quyen.png" alt="Anh5">
+                <img src="Information/quyen.png" alt="Anh5">
                 <button type="button" onclick="showInformation('Quyen')">Information</button>
             </div>
             <div class="member">
-                <img src="anh.png" alt="Anh6">
+                <img src="Information/anh.png" alt="Anh6">
                 <button type="button" onclick="showInformation('Anh')">Information</button>
             </div>
         </div>
             <div class="logout-btn">
                 <form onsubmit="return logout_function();">
                     <button type="button" onclick="logout_function()">Log out</button>
+                    
                 </form>
             </div>
       
