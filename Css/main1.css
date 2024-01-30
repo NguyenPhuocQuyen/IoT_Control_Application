@@ -90,6 +90,7 @@ form {
 
 .row img:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(17, 255, 0, 0.9);
 }
 
 .member {
@@ -153,7 +154,7 @@ form {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    width: 500px; /* Điều chỉnh chiều rộng nếu cần */
+    width: auto; /* Điều chỉnh chiều rộng nếu cần */
     height: auto;
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Thêm hiệu ứng đổ bóng */
@@ -180,7 +181,7 @@ form {
 .light4-title {
     font-size: 20px;
     color: #ff0000;
-    margin-left: 120px;
+    margin-left: 10px;
 }
 .control-light {
     display: flex;
@@ -192,8 +193,39 @@ form {
     margin-right: 10px; /* Khoảng cách giữa chữ "Light 1" và các nút */
 }
 
+.span1-title {
+    color: red;
+    font-size: 20px;
+    margin-right: 10px; /* Khoảng cách giữa chữ "Light 1" và các nút */
+    margin-top: -450px;
+    margin-left: 297px;
+}
+.span2-title{
+    font-size: 20px;
+    color: #ff0000;
+    margin-left: 296px;
+    margin-top: -325px;
+}
+.span3-title{
+    font-size: 20px;
+    color: #ff0000;
+    margin-left: 296px;
+    margin-top: -200px;
+}
+.span4-title{
+    font-size: 20px;
+    color: #ff0000;
+    margin-left: 296px;
+    margin-top: -75px;
+}
+.control-span {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 1px;
+}
+
 .control-buttons{
-    margin-left: 20px;
+    margin-left: 5px; 
 }
 
 .control-buttons button {
@@ -223,5 +255,74 @@ form {
 }
 
 .control-buttons button#turn-off:hover {
+    background-color: #990000; /* Màu nền khi hover */
+}
+
+/* Điều khiển quạt  */
+.control-buttons1{
+    margin-top: -450px; 
+}
+.control-buttons2{
+    margin-left: 17px;
+    margin-top: -325px; 
+}
+.control-buttons3{
+    margin-left: 17px;
+    margin-top: -200px; 
+}
+.control-buttons4{
+    margin-left: 17px;
+    margin-top: -75px; 
+}
+.control-buttons1{
+    margin-left: -5px;
+}
+.control-buttons2,
+.control-buttons3,
+.control-buttons4{
+    margin-left: 5px; 
+}
+.control-buttons1 button, 
+.control-buttons2 button,
+.control-buttons3 button,
+.control-buttons4 button  {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Style for TURN ON button */
+.control-buttons1 button#turn-on, 
+.control-buttons2 button#turn-on, 
+.control-buttons3 button#turn-on,
+.control-buttons4 button#turn-on {
+    background-color: #4CAF50; /* Màu nền xanh lá cây */
+    color: #fff; /* Màu chữ trắng */
+}
+
+/* Hover effect for TURN ON button */
+.control-buttons1 button#turn-on:hover, 
+.control-buttons2 button#turn-on:hover, 
+.control-buttons3 button#turn-on:hover,
+.control-buttons4 button#turn-on:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
+
+/* Style for TURN OFF button */
+.control-buttons1 button#turn-off, 
+.control-buttons2 button#turn-off, 
+.control-buttons3 button#turn-off,
+.control-buttons4 button#turn-off {
+    background-color: #FF0000; /* Màu nền đỏ */
+    color: #fff; /* Màu chữ trắng */
+}
+
+.control-buttons1 button#turn-off:hover, 
+.control-buttons2 button#turn-off:hover, 
+.control-buttons3 button#turn-off:hover,
+.control-buttons4 button#turn-off:hover {
     background-color: #990000; /* Màu nền khi hover */
 }
