@@ -9,7 +9,7 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    background-color: rgba(255, 0, 64, 0.83);
+    background-color: rgba(115, 193, 249, 0.83);
     width: 1470px;
     height: 90px;
     z-index: 1;
@@ -139,7 +139,7 @@ form {
 }
 
 .logout-btn button:hover {
-    background-color: #cc0000;
+    background-color: #7fabfd;
 }
 
 .titlecontrol {
@@ -149,22 +149,36 @@ form {
 }
 
 
-.control-frame, .supervise-frame {
-    border: 2px solid #ff0000;
+.control-frame {
+    border: 2px solid #279ffc;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     width: auto; /* Điều chỉnh chiều rộng nếu cần */
     height: auto;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); /* Thêm hiệu ứng đổ bóng */
+    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
     transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
 }
 
-.control-frame:hover, .supervise-frame:hover {
+.control-frame:hover {
     box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
 }
+.supervise-frame {
+    border: 2px solid #279ffc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 450px; /* Điều chỉnh chiều rộng nếu cần */
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
 
+.supervise-frame:hover {
+    box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
+}
 .screencontrol {
     display: flex;
     justify-content: space-between;
@@ -223,40 +237,77 @@ form {
     align-items: center; /* Căn giữa theo chiều dọc */
     margin-top: 1px;
 }
-
-.control-buttons{
-    margin-left: 5px; 
+/* ------------------- Nút nhấn */
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 85px; /* Increased width to accommodate the text */
+    height: 34px;
+    margin-right: 20px; /* Add some spacing between buttons */
+    margin-left: 20px;
 }
 
-.control-buttons button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
+.toggle-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
     cursor: pointer;
-    font-size: 10px;
-    margin-right: 10px; /* Khoảng cách giữa các nút */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6a6a6;
+    border-radius: 34px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for TURN ON button */
-.control-buttons button#turn-on {
-    background-color: #4CAF50; /* Màu nền xanh lá cây */
-    color: #fff; /* Màu chữ trắng */
+.toggle-indicator {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-/* Hover effect for TURN ON button */
-.control-buttons button#turn-on:hover {
-    background-color: #45a049; /* Màu nền khi hover */
+.toggle-text {
+    position: absolute;
+    top: 8.5px;
+    left: 38px;
+    color: #fff;
+    font-size: 15px;
+    transition: transform 0.3s; /* Add transition for smooth animation */
 }
 
-/* Style for TURN OFF button */
-.control-buttons button#turn-off {
-    background-color: #FF0000; /* Màu nền đỏ */
-    color: #fff; /* Màu chữ trắng */
+.toggle-checkbox:checked + .toggle-label {
+    background: #4CAF50; /* Green color when checked */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
 }
 
-.control-buttons button#turn-off:hover {
-    background-color: #990000; /* Màu nền khi hover */
+.toggle-checkbox:checked + .toggle-label .toggle-indicator {
+    transform: translateX(53px);
 }
+
+.toggle-checkbox:checked + .toggle-label .toggle-text::before {
+    position: absolute;
+    left: -15px;
+    content: "ON";
+}
+
+.toggle-checkbox:not(:checked) + .toggle-label .toggle-text::before {
+    position: absolute;
+    left: 0px;
+    content: "OFF";
+}
+
 
 /* Điều khiển quạt  */
 .control-buttons1{
@@ -325,4 +376,15 @@ form {
 .control-buttons3 button#turn-off:hover,
 .control-buttons4 button#turn-off:hover {
     background-color: #990000; /* Màu nền khi hover */
+}
+
+#cameraFeed {
+    margin-top: 30px;
+    width: 50%; /* Tăng chiều rộng lên 70% */
+    max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
+    border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
+    border-radius: 15px; /* Tăng độ cong góc viền */
+    padding: 15px; /* Tăng khoảng cách padding */
+    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
 }

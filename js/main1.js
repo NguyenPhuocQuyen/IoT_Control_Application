@@ -10,6 +10,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function toggleButtonClick(buttonNumber) {
+    var indicator = document.getElementById("indicator" + buttonNumber);
+    var isChecked = document.getElementById("toggle" + buttonNumber).checked;
+
+    if (isChecked) {
+        indicator.style.transform = "translateX(53px)";
+    } else {
+        indicator.style.transform = "translateX(0)";
+    }
+}
+
+
 function logout_function() {
     window.location.href = "./index.html";
 }
@@ -26,3 +38,15 @@ function showControl(){
 function showSupervise(){
     window.location.href = "./supervise.html";
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('cameraFeed');
+
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            video.srcObject = stream;
+        })
+        .catch((error) => {
+            console.error('Error accessing the camera: ', error);
+        });
+});

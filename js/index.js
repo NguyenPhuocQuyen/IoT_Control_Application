@@ -7,9 +7,6 @@ function loginUser() {
         window.location.href = "./main1.html";
         return true;    
     }
-    // else if (username === "" && password === ""){
-    //     alert("Please enter a username or password");
-    // }
     else {
         alert("Login failed. Please enter a username or password again");
         return false;

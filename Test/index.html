@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Buttons</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .toggle-container {
+            position: relative;
+            display: inline-block;
+            width: 100px; /* Increased width to accommodate the text */
+            height: 34px;
+            margin-right: 20px; /* Add some spacing between buttons */
+        }
+
+        .toggle-checkbox {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-label {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #a6a6a6;
+            border-radius: 34px;
+            transition: background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-indicator {
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .toggle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .toggle-checkbox:checked + .toggle-label {
+            background: #4CAF50; /* Green color when checked */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+        }
+
+        .toggle-checkbox:checked + .toggle-label .toggle-indicator {
+            transform: translateX(68px);
+        }
+
+        .toggle-checkbox:checked + .toggle-label .toggle-text::before {
+            content: "ON";
+        }
+
+        .toggle-checkbox:not(:checked) + .toggle-label .toggle-text::before {
+            content: "OFF";
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Toggle Button 1 -->
+    <div class="toggle-container">
+        <input type="checkbox" class="toggle-checkbox" id="toggle1" onclick="toggleButtonClick(1)" />
+        <label class="toggle-label" for="toggle1">
+            <div class="toggle-indicator" id="indicator1"></div>
+            <div class="toggle-text"></div>
+        </label>
+    </div>
+
+    <!-- Toggle Button 2 -->
+    <div class="toggle-container">
+        <input type="checkbox" class="toggle-checkbox" id="toggle2" onclick="toggleButtonClick(2)" />
+        <label class="toggle-label" for="toggle2">
+            <div class="toggle-indicator" id="indicator2"></div>
+            <div class="toggle-text"></div>
+        </label>
+    </div>
+
+    <!-- Toggle Button 3 -->
+    <div class="toggle-container">
+        <input type="checkbox" class="toggle-checkbox" id="toggle3" onclick="toggleButtonClick(3)" />
+        <label class="toggle-label" for="toggle3">
+            <div class="toggle-indicator" id="indicator3"></div>
+            <div class="toggle-text"></div>
+        </label>
+    </div>
+
+    <!-- Toggle Button 4 -->
+    <div class="toggle-container">
+        <input type="checkbox" class="toggle-checkbox" id="toggle4" onclick="toggleButtonClick(4)" />
+        <label class="toggle-label" for="toggle4">
+            <div class="toggle-indicator" id="indicator4"></div>
+            <div class="toggle-text"></div>
+        </label>
+    </div>
+
+    <script>
+        function toggleButtonClick(buttonNumber) {
+            var indicator = document.getElementById("indicator" + buttonNumber);
+            var isChecked = document.getElementById("toggle" + buttonNumber).checked;
+
+            if (isChecked) {
+                indicator.style.transform = "translateX(68px)";
+            } else {
+                indicator.style.transform = "translateX(0)";
+            }
+        }
+    </script>
+
+</body>
+</html>

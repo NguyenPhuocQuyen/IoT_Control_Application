@@ -30,55 +30,44 @@
                 <div class="control-frame">
                     <h2>Screen Control Devices</h2>
                     <!-- Điều khiển đèn -->
-                    <div class="control-light">
+            
+                   <div class="control-light">
                         <div class="light1-title">
                             <p>Light 1: </p>
                         </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" class="toggle-checkbox" id="toggle1" onclick="toggleButtonClick(1)" />
-                            <label class="toggle-label" for="toggle1">
-                                <div class="toggle-indicator" id="indicator1"></div>
-                                <div class="toggle-text"></div>
-                            </label>
+                        <div class="control-buttons">
+                            <button id="turn-on" onclick="light1_On">TURN ON</button>
+                            <button id="turn-off" onclick="light1_Off">TURN OFF</button>
                         </div>
                     </div>
                     <div class="control-light">
                         <div class="light2-title">
                             <p>Light 2: </p>
                         </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" class="toggle-checkbox" id="toggle2" onclick="toggleButtonClick(2)" />
-                            <label class="toggle-label" for="toggle2">
-                                <div class="toggle-indicator" id="indicator2"></div>
-                                <div class="toggle-text"></div>
-                            </label>
+                        <div class="control-buttons">
+                            <button id="turn-on" onclick="light2_On">TURN ON</button>
+                            <button id="turn-off" onclick="light2_Off">TURN OFF</button>
                         </div>
                     </div>
                     <div class="control-light">
                         <div class="light3-title">
                             <p>Light 3: </p>
                         </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" class="toggle-checkbox" id="toggle3" onclick="toggleButtonClick(3)" />
-                            <label class="toggle-label" for="toggle3">
-                                <div class="toggle-indicator" id="indicator3"></div>
-                                <div class="toggle-text"></div>
-                            </label>
+                        <div class="control-buttons">
+                            <button id="turn-on" onclick="light3_On">TURN ON</button>
+                            <button id="turn-off" onclick="light3_Off">TURN OFF</button>
                         </div>
                     </div>
                     <div class="control-light">
                         <div class="light4-title">
                             <p>Light 4: </p>
                         </div>
-                        <div class="toggle-container">
-                            <input type="checkbox" class="toggle-checkbox" id="toggle4" onclick="toggleButtonClick(4)" />
-                            <label class="toggle-label" for="toggle4">
-                                <div class="toggle-indicator" id="indicator4"></div>
-                                <div class="toggle-text"></div>
-                            </label>
+                        <div class="control-buttons">
+                            <button id="turn-on" onclick="light4_On">TURN ON</button>
+                            <button id="turn-off" onclick="light4_Off">TURN OFF</button>
                         </div>
                     </div>
-
+            
                     <!-- Điều khiển quạt -->
                     <div class="control-span">
                         <div class="span1-title">
@@ -122,8 +111,7 @@
             </div>
             <div class="screencontrol">
                 <div class="supervise-frame">
-                    <h2>Camera Surverllance System</h2>
-                    <video id="cameraFeed" autoplay></video> <!-- video -->
+                    <h2>Screen Supervise Devices</h2>
                 </div>
             </div>
         </div>
